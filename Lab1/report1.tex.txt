@@ -1,0 +1,80 @@
+\documentclass{article} % lub inna klasa dokumentu, np. report lub book
+\usepackage[utf8]{inputenc} % ustawienie kodowania na UTF-8
+\usepackage{amsmath, amssymb, amsthm} % biblioteki do działań matematycznych
+\usepackage[T1]{fontenc}    % wybór odpowiedniego kodowania czcionek
+\usepackage{polski}         % dodanie wsparcia dla polskich znaków
+\usepackage{babel}          % automatyczne dostosowanie języka
+
+\title{Sprawozdanie}
+
+\author{Tomasz Lisowski 197749\and Filip Świniarski 197725\and Nikodem Miłuch 197922}
+
+\begin{document}
+
+\maketitle
+
+\section{Wstęp}
+
+Celem ćwiczenia było wyznaczenie gęstości dwóch wybrancyh cieczy: denaturatu i słonej wody przy użyciu wagi Mohra oraz piknometru. Ciecz wzorcową w układzie badawczym stanowiła woda destylowana.
+
+\subsection{Waga Mohra}
+
+Waga Mohra to precyzyjne urządzenie służące do wyznaczania gęstości cieczy i małych ciał stałych. Składa się z poziomej belki z podziałką oraz obciążników, które umożliwiają precyzyjne wyważenie. Na belce umieszczone jest szkiełko zanurzeniowe (aerometr), które jest zanurzane w badanej cieczy. Gęstość cieczy wyznacza się na podstawie położenia obciążników, które równoważą siłę wyporu cieczy działającą na zanurzone szkiełko.
+
+\subsection{Piknometr}
+
+Piknometr to precyzyjne naczynie laboratoryjne, w kształcie małej butelki z wąską szyjką, służące do pomiaru gęstości cieczy oraz ciał stałych w formie proszku. Piknometr ma dokładnie określoną objętość, co umożliwia wyznaczenie gęstości poprzez zważenie piknometru wypełnionego badaną substancją, a następnie zważenie go z wodą (dla odniesienia). Dzięki tej metodzie można dokładnie obliczyć gęstość badanej substancji na podstawie różnicy mas.
+
+
+\section{Gęstość cieczy mierzona za pomocą Wagi Mohra}
+
+\subsection{Opis doświadczenia}
+
+Zbieranie pomiarów przy użyciu wagi Mohra polegało na wyznaczaniu gęstości cieczy poprzez zrównoważenie siły wyporu. Proces wyglądał następująco:
+
+\begin{enumerate}
+    \item Na początku wagę należy ustawić w pozycji równowagi.
+    \item Do badanego roztworu zanurzano specjalny odważnik zawieszony na końcu belki.
+    \item Na belce wagi umieszczano obciążniki w odpowiednich punktach podziałki, aby zrównoważyć siłę wyporu działającą na odważnik.
+    \item Na podstawie położenia obciążników (koników) na podziałce belki wyznaczano wartość odpowiadającą gęstości cieczy.
+\end{enumerate}
+
+
+Cała procedura pozwalała na bezpośrednie odczytanie gęstości badanej cieczy, dzięki zrównoważeniu ciężarów.
+
+\subsection{Wyprowadzenie wzorów}
+
+Po zanurzeniu ciężarka w cieczy wzorcowej o znanej gęstości $p_w$ (np. w wodzie
+destylowanej) zacznie na niego działać siła wyporu równa, zgodnie z prawem
+Archimedesa, ciężarowi cieczy wypartej przez ciężarek:
+{\large
+    \begin{equation}
+    F_w = p_wgV    
+    \end{equation}
+}
+gdzie $V$ - objętość ciężarka, $g$ - przyspieszenie grawitacyjne.  Dla przywrócenia równowagi (po zanurzeniu nurka w cieczy „wzorcowej”) zawieszamy na odpowiednich haczykach wagi o numerach $p_w$, 
+$q_w$ i $r_w$ odpowiednie koniki o masach m, m/10, m/100. Po przywróceniu równowagi,
+moment siły wyporu działającej na ciężarek zawieszony na dziesiątym haczyku,
+a więc w odległości $L$ od punktu podparcia dźwigni, zostanie zrównoważony sumą momentów sił ciężkości działających na poszczególne koniki, zawieszone w
+odległościach $p_w \frac{L}{10}$ , $q_w \frac{L}{10}$ , $r_w \frac{L}{10}$ od punktu podparcia dźwigni:
+{\large
+    \begin{equation}
+    p_wVg = mg(\frac{p_w}{10}+\frac{q_w}{10}\frac{1}{10}+\frac{r_w}{10}\frac{1}{100})
+    \end{equation}
+}
+analogicznie dla pomiarów z badaną cieczą otrzymujemy:
+{\large
+    \begin{equation}
+    p_wVg = mg(\frac{p}{10}+\frac{q}{10}\frac{1}{10}+\frac{r}{10}\frac{1}{100})
+    \end{equation}
+}
+dzieląc równianie (2) przez równianie (3) otrzymujemy wzór na gęstość badanej cieczy:
+{\large
+    \begin{equation}
+    p = p_w\frac{p+\frac{q}{10}+\frac{r}{100}}{p_w+\frac{q_w}{10}+\frac{r_w}{100}}
+    \end{equation}
+}
+
+
+
+\end{document}
