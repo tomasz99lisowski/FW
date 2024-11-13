@@ -74,7 +74,69 @@ dzieląc równianie (2) przez równianie (3) otrzymujemy wzór na gęstość bad
     p = p_w\frac{p+\frac{q}{10}+\frac{r}{100}}{p_w+\frac{q_w}{10}+\frac{r_w}{100}}
     \end{equation}
 }
+\subsection{Pomiary}
 
+Pomiary doświadczenia zebrano w tabeli poniżej:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Ciecz} & \textbf{M1} & \textbf{M10} & \textbf{M100} \\
+\hline
+Woda destylowana 1 & 1,9 & 2 & 0 \\
+Woda destylowana 2 & 1,9 & 0 & 4 \\
+Woda solona & 2,9 & 2 & 5 \\
+Denaturat & 8 & 1 & 5,4 \\
+\hline
+\end{tabular}
+\caption{Położenie odważników na wadze}
+\label{table:students}
+\end{table}
+
+\subsection{Niepewności pomiarowe}
+
+Niepewności pomiarową $u(f)$ wyznaczymy jako niepwność złożoną z położenia każdego ciężarka. Przyjmujemy, że $\Delta r = \Delta r_w = 0.5$. Pochodne cząstkowe poszczególnych położeń przyjmą wartość:
+{\
+    \begin{equation}
+        \frac{\partial f}{\partial p} = \frac{p_w}{A}
+        \quad\frac{\partial f}{\partial q} = \frac{p_w}{10A}
+        \quad\frac{\partial f}{\partial r} = \frac{p_w}{100A}
+    \end{equation}
+}
+gdzie:
+{\
+    \begin{equation}
+        A = p_w + \frac{q_w}{10} + \frac{r_w}{100}
+    \end{equation}
+}
+
+Dla pomiaru wzorcowego niepewności obliczymy w następujący sposób:
+
+{\large
+    \begin{equation}
+        u(f) = \sqrt{(\frac{p_w}{A}\Delta r_w)^2+(\frac{p_w}{10A}\Delta r_w)^2+(\frac{p_w}{100A}\Delta r_w)^2}
+    \end{equation}
+}
+gdzie wartość $A$ wyznaczymy z równania (6), a $p_w, q_w, r_w$ to wartości dla cieczy wzorcowej.
+\subsection{Wyniki}
+Wyniki pomiarów zebrano w tabeli poniżej:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Ciecz} & \textbf{M1} & \textbf{M10} & \textbf{M100} \\
+\hline
+Woda destylowana 1 & 1,9 & 2 & 0 \\
+Woda destylowana 2 & 1,9 & 0 & 4 \\
+Woda solona & 2,9 & 2 & 5 \\
+Denaturat & 8 & 1 & 5,4 \\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów}
+\label{table:students}
+\end{table}
 
 
 \end{document}
