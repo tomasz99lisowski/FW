@@ -59,19 +59,19 @@ a więc w odległości $L$ od punktu podparcia dźwigni, zostanie zrównoważony
 odległościach $p_w \frac{L}{10}$ , $q_w \frac{L}{10}$ , $r_w \frac{L}{10}$ od punktu podparcia dźwigni:
 {\large
     \begin{equation}
-    p_wVg = mg(\frac{p_w}{10}+\frac{q_w}{10}\frac{1}{10}+\frac{r_w}{10}\frac{1}{100})
+    \rho_wVg = mg(\frac{p_w}{10}+\frac{q_w}{10}\frac{1}{10}+\frac{r_w}{10}\frac{1}{100})
     \end{equation}
 }
 analogicznie dla pomiarów z badaną cieczą otrzymujemy:
 {\large
     \begin{equation}
-    p_wVg = mg(\frac{p}{10}+\frac{q}{10}\frac{1}{10}+\frac{r}{10}\frac{1}{100})
+    \rho_wVg = mg(\frac{p}{10}+\frac{q}{10}\frac{1}{10}+\frac{r}{10}\frac{1}{100})
     \end{equation}
 }
 dzieląc równianie (2) przez równianie (3) otrzymujemy wzór na gęstość badanej cieczy:
 {\large
     \begin{equation}
-    p = p_w\frac{p+\frac{q}{10}+\frac{r}{100}}{p_w+\frac{q_w}{10}+\frac{r_w}{100}}
+    \rho = \rho_w\frac{p+\frac{q}{10}+\frac{r}{100}}{p_w+\frac{q_w}{10}+\frac{r_w}{100}}
     \end{equation}
 }
 \subsection{Pomiary}
@@ -115,12 +115,12 @@ Dla pomiaru wzorcowego niepewności obliczymy w następujący sposób:
 
 {\large
     \begin{equation}
-        u(f) = \sqrt{(\frac{p_w}{A}\Delta r_w)^2+(\frac{p_w}{10A}\Delta r_w)^2+(\frac{p_w}{100A}\Delta r_w)^2}
+        u(f) = \sqrt{(\frac{\rho_w}{A}\Delta r_w)^2+(\frac{\rho_w}{10A}\Delta r_w)^2+(\frac{\rho_w}{100A}\Delta r_w)^2}
     \end{equation}
 }
 gdzie wartość $A$ wyznaczymy z równania (6), a $p_w, q_w, r_w$ to wartości dla cieczy wzorcowej.
-\subsection{Wyniki}
-Wyniki pomiarów zebrano w tabeli poniżej:
+\subsection{Wyniki pomiarów}
+Wyniki pomiarów zebrano w tabeli poniżej. Jeżeli w danej komórce pojawiają się dwie wartości, oznacza to, że do zrównoważenia wagi użyto dwóch ciężarków tego rodzaju. Nie wpływa to na sposób wyznaczania wzorów (4) i (7) a jeddynie powoduje uwzględnieine dotakowego wyrazu o odpowiednim współczynniku.
 
 \begin{table}[h!]
 \centering
@@ -138,5 +138,44 @@ Denaturat & 8 & 1 & 5,4 \\
 \label{table:students}
 \end{table}
 
+
+\subsection{Wyniki doświadczenia}
+
+Ostateczne wyniki pomiarów gęstości cieczy wraz z niepwnościami pomiarowymi zależą od przyjęcia pewnych danych wzorcowych. Dla poniższych pomiarów przyjęto gęstość wody $\rho_w = 1000kg/m^3$
+\subsubsection{Woda destylowana 1 jako ciecz wzorcowa}
+Dla Wody destylowanej 1 jako cieczy wzorcowej wyniki pomiarów gęstości przyjmują następujące wartości:
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Ciecz} & \textbf{Gęstość[$kq/m^3$]} & \textbf{Błąd pomiarowy[$kq/m^3$]}\\
+\hline
+Woda solona & 1102,9 & 49,26\\
+Denaturat & 802,9 & 49,26\\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów}
+\label{table:students}
+\end{table}
+
+\subsubsection{Woda destylowana 2 jako ciecz wzorcowa}
+Dla Wody destylowanej 2 jako cieczy wzorcowej wyniki pomiarów gęstości przyjmują następujące wartości:
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Ciecz} & \textbf{Gęstość[$kq/m^3$]} & \textbf{Błąd pomiarowy[$kq/m^3$]}\\
+\hline
+Woda solona & 1120,5 & 50,051\\
+Denaturat & 825,7 & 50,051\\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów}
+\label{table:students}
+\end{table}
+
+\subsection{Wnioski}
+
+Pomiary przeprowadzone wagą Mohra wskazały poprawne wartości gęstości denaturatu i solonej wody. Duży błąd pomiarowy (w przypadku denaturatu wynoszący więcej niż 5\%) wynika z wad mechanicznych wagi udostępnionej w czasie laboratorium.
 
 \end{document}
