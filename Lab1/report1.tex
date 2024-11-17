@@ -75,9 +75,9 @@ dzieląc równianie (2) przez równianie (3) otrzymujemy wzór na gęstość bad
     \end{equation}
 }
 
-\subsection{Niepewności pomiarowe}
+\subsection{Niepewność pomiarowa}
 
-Niepewności pomiarową $u(f)$ wyznaczymy jako niepwność złożoną z położenia każdego ciężarka. Przyjmujemy, że $\Delta r = \Delta r_w = 0.5$. Pochodne cząstkowe poszczególnych położeń przyjmą wartość:
+Niepewność pomiarową $u(f)$ wyznaczymy jako niepwność złożoną z położenia każdego ciężarka. Przyjmujemy, że $\Delta r = \Delta r_w = 0.5$. Pochodne cząstkowe poszczególnych położeń przyjmą wartość:
 {\
     \begin{equation}
         \frac{\partial f}{\partial p} = \frac{p_w}{A}
@@ -161,9 +161,84 @@ Pomiary przeprowadzone wagą Mohra wskazały poprawne wartości gęstości denat
 
 \section{Gęstość cieczy mierzona za pomocą piknometru}
 \subsection{Opis doświadczenia}
+Wyznaczanie gęstości cieczy odbywa się w następujący sposób:
+\begin{enumerate}
+    \item Wyznaczamy masę piknometru pustego, $m_1$ 
+    \item Wyznaczamy masę piknometru napełnionego cieczą wzorcową, $m_2$;
+    \item Wyznaczamy masę piknometru napełnionego badaną cieczą, $m_3$;
+\end{enumerate}
 \subsection{Wyprowadzenie wzorów}
+Wiedząc, że masę cieczy wzorcowej w piknometrze o objętości V możemy
+wyliczyć jako:
+\begin{equation}
+    m_w = m_2 - m_1 = \rho_wV
+\end{equation}
+masa badanej cieczy wyniesie:
+\begin{equation}
+    m_c = m_3 - m_1 = \rho V
+\end{equation}
+Dzieląc równanie (8) przez równanie (9) otrzymujemy wzór na gęstość badanej cieczy:
+\begin{equation}
+    \rho = \frac{m_3 - m_1}{m_2 - m_1}\rho_w
+\end{equation}
+\subsection{Niepwność pomiarowa}
+Niepewność pomiarową $w(f)$ wyznaczymy jako niepewność złożoną z pomiaru masy piknometru zawierającego ciecze różnego rodzaju. Przyjmujemy, że $\Delta r = 0.001$ (gdyż taką dokładność posiadała waga) laboratoryjna. Pochodne cząstkowe funkcji (10) względem $m_1$, $m_2$, $m_3$ wynoszą:
+\begin{equation}
+    \frac{\partial \rho}{\partial m_1} = \rho_w \cdot \frac{m_3 - m_2}{(m_2 - m_1)^2} = A
+\end{equation}
+\begin{equation}
+    \frac{\partial \rho}{\partial m_2} = \rho_w \cdot \frac{-(m_3 - m_1)}{(m_2 - m_1)^2} = B   
+\end{equation}
+\begin{equation}
+    \frac{\partial \rho}{\partial m_3} = \rho_w \cdot \frac{1}{m_2 - m_1} = C
+\end{equation}
+Ostatecznie niepwność pomiarowa dana jest wzorem:
+{\large
+    \begin{equation}
+        w(f)=\sqrt{(A\Delta r)^2+(B\Delta r)^2+(C\Delta r)^2}
+    \end{equation}
+}
 \subsection{Wyniki pomiarów}
+
+Wyniki pomiarów mas wagą laboratoryjną przedstawiono w Tabeli 4:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Lp.} & \textbf{Woda destylowana} & \textbf{Denaturat} & \textbf{Woda słona}\\
+\hline
+1 & 79.435 & 69.718 & 85.489\\
+2 & 79.468 & 69.742 & 85.508\\
+3 & 79.456 & 69.739 & 85.514\\
+4 & 79.409 & 69.740 & 85.519\\
+5 & 79.443 & 69.733 & 85.498\\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów cieczy w gramach}
+\label{table:students}
+\end{table}
+
+Wyniki pomiaru piknometru przedstawiono w Tabeli 5:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Lp.} & \textbf{Piknometr}\\
+\hline
+1 & 28.509\\
+2 & 28.468\\
+3 & 28.501\\
+4 & 28.509\\
+5 & 28.504\\
+\hline
+\end{tabular}
+\caption{Wyniki pomiaru piknometru w gramach}
+\label{table:students}
+\end{table}
 \subsection{Wyniki doświadczenia}
+Po zestawieniu danych pomiarowch z Tabel (4) i (5) razem z wzorami (10) i (14)
 \subsection{Wnioski}
 
 \end{document}
