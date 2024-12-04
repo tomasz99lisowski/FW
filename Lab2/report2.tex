@@ -5,6 +5,7 @@
 \usepackage{polski}         % dodanie wsparcia dla polskich znaków
 \usepackage{babel}          % automatyczne dostosowanie języka
 \usepackage{pgfplots}       % Pakiet do tworzenia wykresów
+\usepackage{verbatim}
 \pgfplotsset{compat=1.18}
 
 \title{Sprawozdanie}
@@ -117,26 +118,136 @@ Wyniki doświadczenia wraz z niepewnością pomiarową przedstawiono na wykresie
 \hline
 \textbf{Masa \( m \) [kg]} & \textbf{Współczynnik kierunkowy \( k \) [m/kg]} \\ 
 \hline
-0.005 & 1.401 \\ 
-0.010 & 1.360\\ 
-0.015 & 1.388 \\ 
-0.020 & 1.382 \\
-0.025 & 1.379 \\
+0.050 & 1.401 \\ 
+0.100 & 1.360\\ 
+0.150 & 1.388 \\ 
+0.200 & 1.382 \\
+0.250 & 1.379 \\
 \hline
 \end{tabular}
 \caption{Współczynniki kierunkowe \( k \) dla każdego przedziału pomiarowego}
 \end{table}
 \end{center}
 }
-\subsection{Wyniki doświadczenia}
+\subsection{Wyznaczenie współczynnika sprężystości $k$}
 
 Uśredniając wyniki z Tabeli 2 otrzymujemy:
 {\large
 \begin{equation}
-    k = 1.382 \pm0.022 \frac{m}{kg}
+    k = 1.382 \pm0.022 \frac{N}{m}
 \end{equation}
 }
 
+\section{Dynamiczne wyznaczanie współczynnika sprężystości}
+\subsection{Opis doświadczenia}
+Druga metod wyznaczenia współczynnika sprężystości $k$ sprężyny opiera się na pomiarze okresu drgań wahadła $T$. Aby zwiększyć dokładność pomiaru, w ramach doświadczenie liczono czas, w jakim wahadło wykona 10 pełnych okresów. Dzięki temu zniwelować można błąd wynikający z szybkiego włączania i wyłączania stopera dla dużych częstości kołowych $\omega$ wahadła. Eksperyment przebiegał w następującej kolejności:
+\begin{enumerate}
+    \item Ciężarek wprawiono w ruch drgający w kierunku prostopadłym do podłoża.
+    \item Stoperem zmierzono czas T 10 pełnych kresuów drgań.
+    \item Zwiększono ciężar zawieszony na wahadle i powtórzono kroki (1) i (2).
+\end{enumerate}
+\subsection{Wyprowadzenie wzorów}
 
+Za podstawowy wzór wyznaczenia współczynnika sprężystości posłuży wzór na okres drgań wahadła fizycznego:
+{\large
+\begin{equation}
+    T = 2\pi\sqrt{\frac{m}{k}}
+\end{equation}
+}
+Przekszałcając wzór (4) otrtzymujemy:
+{\large
+\begin{equation}
+    k = \frac{4\pi^2m}{T^2}
+\end{equation}
+}
+\subsection{Niepewność pomiarowa}
+Niepewność pomiarową pomiaru czasu T okresu wyznaczymy na podstawie klasy wykorzystanego przedmiotu. Ponieważ stoper umożiwiał pomiar z dokładnością do 0.01 sekundy, zatem niepewność pomiarowa pomiaru okresu to $\Delta r_s = 0.01 [s]$. Masę ciężarków przyjmujemy za dokładną. Niepweność współczynnika kierunkowego $a$ wyznaczamy metodą graficzną w punkcie 3.5. 
 
+\subsection{Wyniki pomiarów}
+Wyniki pomiarów dla drugiej sprężyny przedstwiono w Tabeli 3:
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Lp.} & \textbf{Masa[$g$]} & \textbf{Okres*10[$s$]} & \textbf{Okres[$s$]} & \textbf{Okres $T^2$}\\
+\hline
+1 & 0 & 0 & 0 & 0\\
+2 & 500 & 9.11 & 0.911 & 0.823\\
+3 & 450 & 8.59 & 0.859 & 0.737\\
+4 & 400 & 8.04 & 0.804 & 0.646\\
+5 & 350 & 7.56 & 0.756 & 0.571\\
+6 & 300 & 7.12 & 0.712 & 0.507\\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów}
+\label{table:students}
+\end{table}
+\subsection{Wyniki doświadczenia}
+Wyniki pomiarów zebrano na wykresie. Aby przedstawić, że współczynnik $k$ jest w przybliżeniu stały, os 0X została oznaczona jako $T^2$. 
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        ylabel={Okres $T^2$ [$s^2$]}, % Etykieta osi X
+        xlabel={Masa $m$ [g]},             % Etykieta osi Y
+        grid=major,                        % Siatka na wykresie
+        legend pos=north west,             % Pozycja legendy
+        title={Wykres zależności $T^2$ od $m$}, % Tytuł wykresu
+    ]
+    \addplot+[
+        mark=*,
+        color=blue,
+        error bars/.cd,
+        y dir=both, % Enable error bars in both upward and downward directions
+        y explicit % Explicitly define the errors
+    ] coordinates {
+        (300, 50.7) +- (0,0.1)
+        (350, 58.2) +- (0,0.1)
+        (400, 64.6) +- (0,0.1)
+        (450, 73.7) +- (0,0.1)
+        (500, 82.3) +- (0,0.1)
+    };
+    \addlegendentry{Dane eksperymentalne}
+    \end{axis}
+\end{tikzpicture}
+
+\end{center}
+Korzystając z metody graficznej oraz wzoru (5) wyznaczamy współczynnik kierunowy wraz z niepewnością pomiarową. Współczynnik otrzymano jak iloraz różnicy pomiarów $T^2$ oraz mas (w tym przypadku równą zawsze 0.05 kg).
+\begin{center}
+    \begin{table}[h!]
+\centering
+
+\label{tab:coefficients}
+
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Masa \( m \) [kg]} & \textbf{Współczynnik kierunkowy \( a \) [$s^2/kg$]} \\ 
+\hline
+1 & 0.78 \\ 
+2 & 0.67\\ 
+3 & 0.54 \\ 
+4 & 0.58 \\
+\hline
+\end{tabular}
+\caption{Współczynniki kierunkowe \( k \) dla każdego przedziału pomiarowego}
+\end{table}
+\end{center}
+Niepewność pomiarowa współczynnika kierunkowego zależała jedynie od $T$ i wyniosła $\Delta r_k = 0.02$
+\subsection{Wyznaczenie współczynnika sprężystości $k$}
+Ostatecznie uwzględniając stałą proporcjonalności $4\pi^2$ i dane z Tabeli 4 otzymujemy:
+{\large
+\begin{equation}
+    k = 25.34\pm0.02N/m
+\end{equation}
+}
+\section{Wyznaczenie modułu sztywności sprężyny}
+\subsection{Opis doświadczenia}
+Moduł sztywności to wielkość określająca sprężystość materiału przy rozciąganiu i ściskaniu. W tym przypadku wynaczenie modułu sprowadza się
+\begin{comment}
+\subsection{Opis doświadczenia}
+\subsection{Wyprowadzenie wzorów}
+\subsection{Niepewność pomiarowa}
+\subsection{Wyniki pomiarów}
+\subsection{Wyniki doświadczenia}
+\subsection{Wyznaczenie współczynnika sprężystości $k$}
+\end{comment}
 \end{document}
