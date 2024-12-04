@@ -114,15 +114,14 @@ Wyniki doświadczenia wraz z niepewnością pomiarową przedstawiono na wykresie
 
 \label{tab:coefficients}
 
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-\textbf{Masa \( m \) [kg]} & \textbf{Współczynnik kierunkowy \( k \) [m/kg]} \\ 
+\textbf{Masa \( m \) [kg]} & \textbf{Współczynnik kier. a} & \textbf{Odwrotność a czyli \( k \) [m/kg]} \\ 
 \hline
-0.050 & 1.401 \\ 
-0.100 & 1.360\\ 
-0.150 & 1.388 \\ 
-0.200 & 1.382 \\
-0.250 & 1.379 \\
+0.050 & 0.74 & 1.351 \\ 
+0.100 & 0.68 & 1.471 \\ 
+0.150 & 0.72 & 1.389 \\ 
+0.200 & 0.72 & 1.389 \\
 \hline
 \end{tabular}
 \caption{Współczynniki kierunkowe \( k \) dla każdego przedziału pomiarowego}
@@ -134,7 +133,7 @@ Wyniki doświadczenia wraz z niepewnością pomiarową przedstawiono na wykresie
 Uśredniając wyniki z Tabeli 2 otrzymujemy:
 {\large
 \begin{equation}
-    k = 1.382 \pm0.022 \frac{N}{m}
+    k = 1.400 \pm0.06 \frac{N}{m}
 \end{equation}
 }
 
@@ -241,7 +240,71 @@ Ostatecznie uwzględniając stałą proporcjonalności $4\pi^2$ i dane z Tabeli 
 }
 \section{Wyznaczenie modułu sztywności sprężyny}
 \subsection{Opis doświadczenia}
-Moduł sztywności to wielkość określająca sprężystość materiału przy rozciąganiu i ściskaniu. W tym przypadku wynaczenie modułu sprowadza się
+Moduł sztywności $G$ to wielkość określająca sprężystość materiału przy rozciąganiu i ściskaniu. W tym przypadku wynaczenie modułu sprowadza się do pomiaru następujących wielkości:
+\begin{enumerate}
+    \item $r$ - promień drutu, z którego została wykonana sprężyna
+    \item $N$ - liczba zwojów sprężyny
+    \item $R$ - promień sprężyny
+\end{enumerate}
+\subsection{Wyprowadzenie wzorów}
+Aby wyznaczyć moduł sztywności $G$ skorzystamy ze wzoru:
+{\large
+\begin{equation}
+    k = \frac{Gr^2}{4NR^3}
+\end{equation}
+}
+Po przekształceniach otrzymujemy:
+{\large
+\begin{equation}
+    G = k\frac{4NR^3}{r^2}
+\end{equation}
+}
+\subsection{Niepewność pomiarowa}
+Niepewność pomiarową $u(f)$ wyznaczamy jako niepewność wielkości złożonej. Niepewność każdego pomiaru to $\Delta r = 0.001[m]$Pochodne cząstkowe względem $r, N$ i $R$ wynoszą odpowiednio:
+{\large
+\begin{equation}
+    \frac{\partial G}{\partial r} = -\frac{8kNR^3}{r^3} = A
+\end{equation}
+
+\begin{equation}
+    \frac{\partial G}{\partial N} = \frac{4kR^3}{r^2} = B
+\end{equation}
+
+\begin{equation}
+    \frac{\partial G}{\partial R} = \frac{12kNR^2}{r^2} = C
+\end{equation}
+}
+Ostatecznie wzór na niepewność pomiarową przyjmuje postać:
+{\large
+\begin{equation}
+    u(f) = \sqrt{(A\Delta r)^2+(B\Delta r)^2+(C\Delta r)^2}
+\end{equation}
+}
+gdzie $A, B$ i $C$ to wartości poszczególnych pochodnych cząstkowych, a $k$ to współczynnik sprężystości.
+\subsection{Wyniki pomiarów}
+Wyniki pomiarów zebrano w Tabeli 5:
+\begin{center}
+\begin{table}[h!]
+\centering
+\label{tab:coefficients}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Promień drutu \( r \) [mm]} & \textbf{Liczba zwojów \( N \) [*]} &\textbf{Promień sprężyny $R$[mm]}\\ 
+\hline
+0.435 & 81 & 5.2 \\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów własności sprężyny}
+\end{table}
+\end{center}
+\subsection{Wyznaczenie modułu sztywności}
+Aby wyznaczyć moduł sztywności sprężyny dane z Tabeli 5 wstaiamy do wzoru (7). Niepewność wyznaczamy podstawiając te same dane do wzorów (8), (9), (10) i (11).
+{\large
+\begin{equation}
+    G=353.106\pm0.027N/m^2
+\end{equation}
+}
+
 \begin{comment}
 \subsection{Opis doświadczenia}
 \subsection{Wyprowadzenie wzorów}
