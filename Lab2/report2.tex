@@ -118,22 +118,23 @@ Wyniki doświadczenia wraz z niepewnością pomiarową przedstawiono na wykresie
 \hline
 \textbf{Masa \( m \) [kg]} & \textbf{Współczynnik kier. a} & \textbf{Odwrotność a czyli \( k \) [m/kg]} \\ 
 \hline
-0.050 & 0.74 & 1.351 \\ 
-0.100 & 0.68 & 1.471 \\ 
-0.150 & 0.72 & 1.389 \\ 
-0.200 & 0.72 & 1.389 \\
+0.050 & 0.74 & 13.25 \\ 
+0.100 & 0.68 & 14.43 \\ 
+0.150 & 0.72 & 13.62 \\ 
+0.200 & 0.72 & 13.62 \\
 \hline
 \end{tabular}
 \caption{Współczynniki kierunkowe \( k \) dla każdego przedziału pomiarowego}
 \end{table}
 \end{center}
-}
+Wynik w tabeli są obliczone po przemnożeniu przez stałą $g = 9.81m/s^2$}.
+
 \subsection{Wyznaczenie współczynnika sprężystości $k$}
 
 Uśredniając wyniki z Tabeli 2 otrzymujemy:
 {\large
 \begin{equation}
-    k = 1.400 \pm0.06 \frac{N}{m}
+    k = 13.730 \pm0.060 \frac{N}{m}
 \end{equation}
 }
 
@@ -304,7 +305,51 @@ Aby wyznaczyć moduł sztywności sprężyny dane z Tabeli 5 wstaiamy do wzoru (
     G=353.106\pm0.027N/m^2
 \end{equation}
 }
-
+\section{Szeregowy układ sprężyn}
+\subsection{Opis doświadczenia}
+W ramach ostatniej części doświadczenie obie sprężyny połączono szeregowo. Następnie zmieżono ich wychylenia wraz z obciążeniem. Na tej podstawie można wyznaczyć wspołczynnik sprężystości metodą doświadczalną i arytmetyczną.
+\subsection{Metoda doświadczalna}
+Dane pomiarowe zebrano w Tabeli 6:
+\begin{center}
+\begin{table}[h!]
+\centering
+\label{tab:coefficients}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Lp.} & \textbf{Masa[g]} &\textbf{Wydłużenie[cm]]}\\ 
+\hline
+1 & 50 & 10.5 \\
+2 & 100 & 16.0 \\
+3 & 150 & 21.5 \\
+4 & 200 & 27.3 \\
+5 & 250 & 32.7 \\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów połączenia szeregowego sprężyn}
+\end{table}
+\end{center}
+Po wstawieniu danych we wzory wykorzystane w ramach pierwszej części całego laboratorium otrzymujemy:
+{\large
+\begin{equation}
+    k_s = 6.121\pm0.685N/m
+\end{equation}
+}
+\subsection{Metoda arytmetyczna}
+Współczynnik sprężystości układu sprężyn można wyliczyć na podstawie wzoru:
+{\large
+\begin{equation}
+    \frac{1}{k_s} = \frac{1}{k_1}+\frac{1}{k_2}+\frac{1}{k_3}+\dots+\frac{1}{k_n}
+\end{equation}
+}
+Podstawiając dane ze wzroró (6) i (3) do wzoru (15) otrzymujemy:
+{\large
+\begin{equation}
+    k_s = 8.904\pm0.025
+\end{equation}
+}
+Wyniki doświadczalny nie mieści się w granicach wyniku matematycznego.
+\section{Wnioski}
+Rozbieżność pomiarowa wynika z niedokładności pomiarów wykonancyh przez studentów za pomocą sprzętu labaratoryjnego.
 \begin{comment}
 \subsection{Opis doświadczenia}
 \subsection{Wyprowadzenie wzorów}
