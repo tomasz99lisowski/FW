@@ -201,16 +201,19 @@ gdzie $\rho$ - opór właściwy, a $l, S$ to kolejno długość i pole przekroju
 Ponieważ człon $\rho\frac{4l}{\pi}$ jest stały dla każdego pomiaru, wykres $f(\frac{1}{d^2})$ będzie miał charakter liniowy.
 \subsection{Niepewność pomiarowa}
 
+Niepewność pomiaru to $\Delta r$ = 0.1[$\Omega$].
+Ostatecznie niepewność pomiarowa dana jest wzorem:
+
 \subsection{Wyniki doświadczenia}
 
 \begin{center}
 \begin{tikzpicture}
     \begin{axis}[
-        ylabel={Okres $T^2$ [$s^2$]}, % Etykieta osi X
-        xlabel={Masa $m$ [g]},             % Etykieta osi Y
+        ylabel={Opór $R$ [$\Omega$]}, % Etykieta osi X
+        xlabel={Odwrotność kwardatu  $\frac{1}{d^2}$ [$\frac{1}{m^2}$]},             % Etykieta osi Y
         grid=major,                        % Siatka na wykresie
         legend pos=north west,             % Pozycja legendy
-        title={Wykres zależności $T^2$ od $m$}, % Tytuł wykresu
+        title={Wykres zależności $R$ od $\frac{1}{d^2}$}, % Tytuł wykresu
     ]
     \addplot+[
         mark=*,
@@ -219,14 +222,29 @@ Ponieważ człon $\rho\frac{4l}{\pi}$ jest stały dla każdego pomiaru, wykres $
         y dir=both, % Enable error bars in both upward and downward directions
         y explicit % Explicitly define the errors
     ] coordinates {
-        (300, 50.7) +- (0,0.1)
-        (350, 58.2) +- (0,0.1)
-        (400, 64.6) +- (0,0.1)
-        (450, 73.7) +- (0,0.1)
-        (500, 82.3) +- (0,0.1)
+        (8163265, 5.3) +- (0,0.1)
+        (4000000, 2.5) +- (0,0.1)
+        (2040816.33, 1.5) +- (0,0.1)
+        (1000000, 0.6) +- (0,0.1)
+        
     };
     \addlegendentry{Dane eksperymentalne}
     \end{axis}
 \end{tikzpicture}
 \end{center}
+Podstawiając odpowiednie dane do wzoru (10) otrzymujemy teoretyczny współczynnik kierunkowy. Dla $\rho = 0.5 \cdot10^{-6}$ $\Omega \cdot m$, oraz $l = 1$ m. Jego wartośc wynosi:
+{\large
+\begin{equation}
+    a = 0.63 \quad \Omega \cdot m^2
+\end{equation}
+}
+Uśredniając dane z wykresu otrzymujemy wynik:
+{\large
+\begin{equation}
+    a = 0.67 \quad \Omega \cdot m^2
+\end{equation}
+}
+Wyniki są do siebie zbliżone.
+\section{Opór właściwy konstantanu}
+
 \end{document}
