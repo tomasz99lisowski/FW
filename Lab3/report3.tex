@@ -16,7 +16,7 @@
 \begin{document}
 \maketitle
 
-\section{Wtęp}
+\section{Wstęp}
 
 Celem ćwiczenia jest pomiar oporu elektrycznego pojedynczych rezystorów
 oraz układu rezystorów połączonych szeregowo z wykorzystaniem mostka prądu stałego (mostek Wheatstone’a).
@@ -25,7 +25,7 @@ oraz układu rezystorów połączonych szeregowo z wykorzystaniem mostka prądu 
 
 Mostek Wheatstone’a to precyzyjny układ elektryczny służący do pomiaru nieznanych wartości rezystancji. Składa się z czterech rezystorów połączonych w formie mostka, do którego podłączone są źródło napięcia oraz galwanometr umożliwiający wykrywanie równowagi mostka. Mostek jest w równowadze, gdy prąd płynący przez galwanometr wynosi zero. Dzieje się tak, gdy stosunek rezystancji w jednej gałęzi równa się stosunkowi rezystancji w drugiej gałęzi.
 
-\section{Wyznaczenie rezystancji wybranych resystorów}
+\section{Wyznaczenie rezystancji wybranych rezystorów}
 
 \subsection{Opis doświadczenia}
 
@@ -49,7 +49,7 @@ Gdzie: $R_x$ - szukana rezystancja, $R_n$ - opór znanego rezystora, $l_1, l_2$ 
 
 \subsection{Niepewność pomiarowa}
 
-Niepewność pomiarową wyznaczamy jako niepewność wielkość złożonej. Błąd pomiarowy pomiaru długości $l_1, l_2$ wynzaczamy na podstawie podziałki pontencjometru. W tym przypadku $\Delta l$ = 0.001[m]. Pochodne cząstkowe mierzonych wartości ze wzoru (1) przyjmują wartości:
+Niepewność pomiarową wyznaczamy jako niepewność wielkość złożonej. Błąd pomiarowy pomiaru długości $l_1, l_2$ wyznaczamy na podstawie podziałki potencjometru. W tym przypadku $\Delta l$ = 0.001[m]. Pochodne cząstkowe mierzonych wartości ze wzoru (1) przyjmują wartości:
 {\large
 \begin{equation}
 \frac{\partial R_x}{\partial l_1} = R_n\frac{1}{l_2}    
@@ -141,7 +141,7 @@ Matematyczne wyznaczenie układu daje podobny wynik wynoszący:
 }
 
 
-\section{Równolegly układ rezystorów}
+\section{Równoległy układ rezystorów}
 
 
 \subsection{Opis doświadczenia}
@@ -178,15 +178,15 @@ Matematyczne wyznaczenie układu daje podobny wynik wynoszący:
     R_{rw} = 0.101\pm0.001\Omega
 \end{equation}
 }
-\section{Przewody konstantynowe}
+\section{Przewody konstantanowe}
 
 \subsection{Opis doświadczenia}
 
-W ramach sprzętu laboratorynjego udostępnione zostały 4 druty zrobione z konstantanu. Przoprzez wpinanie ich w układ, w kótrym płynął prąd o stałym napięciu i natężeniu oraz wykorzystanie miernika dekadowego można wyznaczyć zależność oporu od średnicy.
+W ramach sprzętu laboratoryjnego udostępnione zostały 4 druty zrobione z konstantanu. Poprzez wpinanie ich w układ, w którym płynął prąd o stałym napięciu i natężeniu oraz wykorzystanie miernika dekadowego można wyznaczyć zależność oporu od średnicy.
 
 \subsection{Wyprowadzenie wzorów}
 
-Oby wykreślić zależność opóru elektrycznego od posłużymy się wzorem na na opór właściwy:
+Oby wykreślić zależność oporu elektrycznego od posłużymy się wzorem na na opór właściwy:
 {\large
 \begin{equation}
     R_w = \rho\frac{l}{S}
@@ -210,7 +210,7 @@ Ostatecznie niepewność pomiarowa dana jest wzorem:
 \begin{tikzpicture}
     \begin{axis}[
         ylabel={Opór $R$ [$\Omega$]}, % Etykieta osi X
-        xlabel={Odwrotność kwardatu  $\frac{1}{d^2}$ [$\frac{1}{m^2}$]},             % Etykieta osi Y
+        xlabel={Odwrotność kwadratu  $\frac{1}{d^2}$ [$\frac{1}{m^2}$]},             % Etykieta osi Y
         grid=major,                        % Siatka na wykresie
         legend pos=north west,             % Pozycja legendy
         title={Wykres zależności $R$ od $\frac{1}{d^2}$}, % Tytuł wykresu
@@ -232,7 +232,7 @@ Ostatecznie niepewność pomiarowa dana jest wzorem:
     \end{axis}
 \end{tikzpicture}
 \end{center}
-Podstawiając odpowiednie dane do wzoru (10) otrzymujemy teoretyczny współczynnik kierunkowy. Dla $\rho = 0.5 \cdot10^{-6}$ $\Omega \cdot m$, oraz $l = 1$ m. Jego wartośc wynosi:
+Podstawiając odpowiednie dane do wzoru (10) otrzymujemy teoretyczny współczynnik kierunkowy. Dla $\rho = 0.5 \cdot10^{-6}$ $\Omega \cdot m$, oraz $l = 1$ m. Jego wartość wynosi:
 {\large
 \begin{equation}
     a = 0.63 \quad \Omega \cdot m^2
@@ -268,12 +268,12 @@ Ostateczna niepewność:
 }
 \subsection{Wyniki doświadczenia}
 
-Korzystając z wspołczynnika $a$ wyznaczonego metodą graficzną w podpunkcie 5.4 i podstawiając odpowiednie dane do wzorów (13) i (15) otrzymujemy opór właściwy konstantanu równy:
+Korzystając z współczynnika $a$ wyznaczonego metodą graficzną w podpunkcie 5.4 i podstawiając odpowiednie dane do wzorów (13) i (15) otrzymujemy opór właściwy konstantanu równy:
 {\large
 \begin{equation}
     \rho_k =  0.53 \pm 0.4 \quad\Omega \cdot m
 \end{equation}
 }
 \subsection{Wnioski}
-Ostateczny opór właściwy mieści się w przedziele wyznaczonego doświadczalnie oporu właściwego.
+Ostateczny opór właściwy mieści się w przedziale wyznaczonego doświadczalnie oporu właściwego.
 \end{document}
