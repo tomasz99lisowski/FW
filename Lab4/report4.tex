@@ -101,7 +101,47 @@ Podstawiając dane z wzoru (3) do wzoru (5) i (6) otrzymujemy ($l = 0.1m$):
     a = 0.043164\pm0.000089
 \end{equation}
 }
+\section{Zadanie E5.3}
 
+\subsection{Opis}
+
+Poprzez wykonwyanie pomiarów w obwodzie, w kótrym płynął prąd o stałym napięciu, ale zwiększającej się mocy otrzymujemy zależność wartości indukcji pola magnetycznego $B$ od nateżenie prądu płynącego przez zwojnicę.
+\subsection{Wzory}
+
+Do obliczenia wartości indukcji pola magnetycznego wykorzystujemy zależność:
+{\large
+\begin{equation}
+    B = \frac{F}{Il}
+\end{equation}
+}
+
+\subsection{Wykres}
+
+Pomiar wykonano przy stałym natężeniu $I = 2$A. 
+Dane pomiarowe przedstawia wykres poniżej:
+
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel={$I_m$},
+        ylabel={$B$},
+        grid=major,
+        width=10cm,
+        height=7cm,
+        legend pos=north west,
+    ]
+    % Dane
+    \addplot coordinates {
+        (0.2, 1.85)
+        (0.38, 1.88)
+        (0.55, 1.92)
+        (0.7, 1.95)
+    };
+    \legend{Dane wejściowe}
+    \end{axis}
+\end{tikzpicture}
+\section{Wnioski}
+
+Dane wahają się znaczenie z uwagi na niedokładność sprzętu laboratoryjnego.
 
 \end{document}
 
